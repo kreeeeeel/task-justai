@@ -10,6 +10,6 @@ interface VkMessageApi {
     suspend fun sendMessage(
         @Query("user_id") userId: Long,
         @Query("message") message: String,
-        @Query("random_id") randomId: Int = 0
+        @Query("random_id") randomId: Int
     ): Response<Void>
 }

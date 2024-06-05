@@ -4,5 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 data class MessageModel(
     @field:JsonProperty("text") val text: String,
-    @field:JsonProperty("from_id") var fromId: Long
+    @field:JsonProperty("from_id") var fromId: Long,
+    @field:JsonProperty("id") var messageId: Int,
 )

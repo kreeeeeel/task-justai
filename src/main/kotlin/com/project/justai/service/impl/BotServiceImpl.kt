@@ -32,7 +32,11 @@ class BotServiceImpl(
 
     private suspend fun sendMessage(eventModel: EventModel): String {
         eventModel.event?.let {
-            vkMessageApi.sendMessage(message = "Вы сказали: ${it.message.text}", userId = it.message.fromId)
+            vkMessageApi.sendMessage(
+                message = "Вы сказали: ${it.message.text}",
+                userId = it.message.fromId,
+                randomId = it.message.messageId
+            )
         }
         return "ok"
     }
